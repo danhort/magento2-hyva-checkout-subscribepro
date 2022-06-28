@@ -40,7 +40,7 @@ function CreditCard({ method, selected, actions }) {
   );
 
   useEffect(() => {
-    registerPaymentAction('subscribe_pro', paymentSubmitHandler);
+    registerPaymentAction(method.code, paymentSubmitHandler);
   }, [registerPaymentAction, paymentSubmitHandler]);
 
   // When script loads, then init Iframe
@@ -107,7 +107,6 @@ function CreditCard({ method, selected, actions }) {
           <input type="text" id="year" name="year" maxlength="4"/><br/>
           <label>CVV</label>
           <div id="spreedly-cvv" style="width:60px; height:35px; border: 2px solid "></div>
-          <button className="btn btn-primary btn-size-lg" onClick="">Place Order</button>
         </div>
       )}
     </div>
