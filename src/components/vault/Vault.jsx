@@ -45,7 +45,7 @@ function Vault({ method, selected, actions }) {
         />
       </div>
       {(subscribeProConfig.isActive && isSelected) && (
-        <div class="border p-2 mt-2">
+        <div class="ml-6 pb-5">
           {
             Object.keys(vault).map((key) => {
               return (
