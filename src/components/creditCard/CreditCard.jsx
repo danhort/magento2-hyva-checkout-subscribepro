@@ -137,22 +137,22 @@ function CreditCard({ method, selected, actions }) {
         />
       </div>
       {(subscribeProConfig.isActive && isSelected) && (
-        <div class="ml-5 mt-5 grid grid-cols-7 gap-x-3 max-w-md">
+        <div className="grid max-w-md grid-cols-7 mt-5 ml-5 gap-x-3">
           <input type="hidden" name="payment_method_token" id="payment_method_token"/>
-          <div class="col-span-7">
+          <div className="col-span-7">
             <label for="spreedly-number">Credit Card Number <sup>*</sup></label>
-            <div id="spreedly-number" class="h-10 form-input"></div>
+            <div id="spreedly-number" className="h-10 form-input"></div>
           </div>
-          <div class="col-span-4">
+          <div className="col-span-4">
             <label for="month">Expiration Date <sup>*</sup></label>
-            <div class="flex gap-x-3">
-              <input id="spreedly-month" type="text" class="form-input h-10" name="month" placeholder="MM" maxlength="2" onChange={validateMonth}/>
-              <input id="spreedly-year" type="text" class="form-input h-10" name="year" placeholder="YYYY" maxlength="4" onChange={validateYear}/>
+            <div className="flex gap-x-3">
+              <input id="spreedly-month" type="text" className="h-10 form-input" name="month" placeholder="MM" maxlength="2" onChange={validateMonth}/>
+              <input id="spreedly-year" type="text" className="h-10 form-input" name="year" placeholder="YYYY" maxlength="4" onChange={validateYear}/>
             </div>
           </div>
-          <div class="col-span-2 col-start-6">
+          <div className="col-span-2 col-start-6">
             <label for="spreedly-cvv">CVV <sup>*</sup></label>
-            <div id="spreedly-cvv" class="h-10 form-input"></div>
+            <div id="spreedly-cvv" className="h-10 form-input"></div>
           </div>
         </div>
       )}
