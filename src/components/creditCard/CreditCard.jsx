@@ -30,6 +30,8 @@ function CreditCard({ method, selected, actions }) {
 
       var requiredFields = {};
       requiredFields["full_name"] = values.billing_address.fullName;
+      requiredFields["first_name"] = values.billing_address.firstname;
+      requiredFields["last_name"] = values.billing_address.lastname;
       requiredFields["month"] = document.getElementById("spreedly-month").value;
       requiredFields["year"] = document.getElementById("spreedly-year").value;
 
